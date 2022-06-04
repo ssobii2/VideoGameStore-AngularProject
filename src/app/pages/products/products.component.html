@@ -1,3 +1,24 @@
 <app-navigation></app-navigation>
-<p>Products component works</p>
+
+<div class="container">
+  <div class="products-container">
+      <h1 class="pt-3 text-danger fs-1">Games</h1>
+      <div class="product-grid">
+          <div class="row mb-4 gy-4">
+              <div *ngFor="let product of Product" class="product-square">
+                  <div class="card" style="width: 18rem;">
+                      <img class="card-img-top" [src]="product.productSmallImage" />
+                      <div class="card-body">
+                          <h5 class="card-title">{{ product.productTitle }}</h5>
+                          <p>{{ product.productDescription }}</p>
+                          <p> ${{product.productPrice}} <span>USD</span> </p>
+                          <a class="btn btn-primary">Buy</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
 <app-footer></app-footer>

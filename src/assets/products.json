@@ -1,0 +1,90 @@
+[
+  {
+    "productId": 1,
+    "productCode": "101",
+    "productName": "Games",
+    "productTitle": "Grand Theft Auto Vice City",
+    "productSubTitle": "Grand Theft Auto Vice City",
+    "productPlatform": "Rockstar Games",
+    "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent diam mi, scelerisque pulvinar finibus ut, malesuada at sapien. Proin lobortis magna ut orci rhoncus, non consectetur enim sollicitudin. Nam quis.",
+    "productSmallImage": "./assets/game1.jpg",
+    "productPrice": 32.83
+  },
+  {
+    "productId": 2,
+    "productCode": "102",
+    "productName": "Games",
+    "productTitle": "Mortal Kombat 11",
+    "productSubTitle": "Mortal Kombat 11",
+    "productPlatform": "Steam",
+    "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent diam mi, scelerisque pulvinar finibus ut, malesuada at sapien. Proin lobortis magna ut orci rhoncus, non consectetur enim sollicitudin. Nam quis.",
+    "productSmallImage": "./assets/game2.jpeg",
+    "productPrice": 19.99
+  },
+  {
+    "productId": 3,
+    "productCode": "103",
+    "productName": "Games",
+    "productTitle": "FIFA 22",
+    "productSubTitle": "FIFA 22",
+    "productPlatform": "Origin",
+    "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent diam mi, scelerisque pulvinar finibus ut, malesuada at sapien. Proin lobortis magna ut orci rhoncus, non consectetur enim sollicitudin. Nam quis.",
+    "productSmallImage": "./assets/game3.jpg",
+    "productPrice": 26.00
+  },
+  {
+    "productId": 4,
+    "productCode": "104",
+    "productName": "Games",
+    "productTitle": "Grand Theft Auto 5",
+    "productSubTitle": "Grand Theft Auto 5",
+    "productPlatform": "Rockstar Games",
+    "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent diam mi, scelerisque pulvinar finibus ut, malesuada at sapien. Proin lobortis magna ut orci rhoncus, non consectetur enim sollicitudin. Nam quis.",
+    "productSmallImage": "./assets/game4.jpg",
+    "productPrice": 25.00
+  },
+  {
+    "productId": 5,
+    "productCode": "105",
+    "productName": "Games",
+    "productTitle": "NBA 2K22",
+    "productSubTitle": "NBA 2K22",
+    "productPlatform": "Steam",
+    "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent diam mi, scelerisque pulvinar finibus ut, malesuada at sapien. Proin lobortis magna ut orci rhoncus, non consectetur enim sollicitudin. Nam quis.",
+    "productSmallImage": "./assets/game5.jpg",
+    "productPrice": 25.00
+  },
+  {
+    "productId": 6,
+    "productCode": "106",
+    "productName": "Games",
+    "productTitle": "Witcher 3",
+    "productSubTitle": "Witcher 3",
+    "productPlatform": "Steam",
+    "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent diam mi, scelerisque pulvinar finibus ut, malesuada at sapien. Proin lobortis magna ut orci rhoncus, non consectetur enim sollicitudin. Nam quis.",
+    "productSmallImage": "./assets/small1.jpg",
+    "productPrice": 25.00
+  },
+  {
+    "productId": 7,
+    "productCode": "107",
+    "productName": "Games",
+    "productTitle": "God of War",
+    "productSubTitle": "God of War",
+    "productPlatform": "Epic Games",
+    "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent diam mi, scelerisque pulvinar finibus ut, malesuada at sapien. Proin lobortis magna ut orci rhoncus, non consectetur enim sollicitudin. Nam quis.",
+    "productSmallImage": "./assets/small2.jpg",
+    "productPrice": 25.00
+  },
+  {
+    "productId": 8,
+    "productCode": "108",
+    "productName": "Games",
+    "productTitle": "Red Dead Redemption 2",
+    "productSubTitle": "Red Dead Redemption 2",
+    "productPlatform": "Rockstar Games",
+    "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent diam mi, scelerisque pulvinar finibus ut, malesuada at sapien. Proin lobortis magna ut orci rhoncus, non consectetur enim sollicitudin. Nam quis.",
+    "productSmallImage": "./assets/small3.jpg",
+    "productPrice": 25.00
+  }
+]
