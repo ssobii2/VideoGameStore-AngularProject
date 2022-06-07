@@ -1,6 +1,6 @@
-<app-navigation></app-navigation>
+<app-navigation [userInput]="user"></app-navigation>
 
-<form class="d-flex justify-centent-center align-items-center flex-column p-3 m-4">
+<form (submit)="onSubmit($event)" class="d-flex justify-centent-center align-items-center flex-column p-3 m-4">
   <div class="m-4 text-danger w-50">
     <label for="exampleInputEmail1" class="form-label">Email address</label>
     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
