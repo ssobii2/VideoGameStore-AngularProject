@@ -14,6 +14,8 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CartComponent } from './pages/cart/cart.component';
+import { CheckoutComponent } from './pages/checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { HttpClientModule } from '@angular/common/http';
     FaqComponent,
     ContactComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    CartComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,

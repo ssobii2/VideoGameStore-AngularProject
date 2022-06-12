@@ -1,6 +1,5 @@
 /* footer styling + fixing to bottom */
-
 footer {
-    position: sticky; 
+    position: sticky;
     top: 100%;
 }

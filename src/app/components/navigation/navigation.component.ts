@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { User } from 'src/models/user.model';
+import { CartService } from 'src/services/cart.service';
 
 @Component({
   selector: 'app-navigation',
@@ -19,6 +20,7 @@ export class NavigationComponent implements OnInit {
     * Get the display name of the logged in user. First name abbreviated (e.g. Pro Gamer -> P. Gamer).
     * @returns
     */
+     itemInCart: number = 0;
 
      public getDisplayName(): string {
       let name: string = '';
@@ -32,9 +34,15 @@ export class NavigationComponent implements OnInit {
       }
       return name;
   }
-  constructor() { }
+  constructor(private cartService: CartService) { }
 
   ngOnInit(): void {
+    // this.cartService.getProductData().subscribe((res: string | any[]) => {
+    //   this.totalItemNumber = res.length;
+    // })
+    this.cartService.productList.subscribe((res: any) => {
+      this.itemInCart = res.length;
+    })
   }
 
 }

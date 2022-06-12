@@ -1,19 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PRODUCT } from 'src/models/product.model';
+import { CartService } from 'src/services/cart.service';
 import { ProductsService } from 'src/services/products.service';
-import Games from '../../../assets/products.json';
-
-// export interface PRODUCT {
-//   productId: number;
-//   productCode: string;
-//   productName: string;
-//   productTitle: string;
-//   productSubTitle: string;
-//   productDescription: string;
-//   productPlatform: string;
-//   productSmallImage: string;
-//   productPrice: number;
-// }
 
 @Component({
   selector: 'app-products',
@@ -26,12 +14,20 @@ export class ProductsComponent implements OnInit {
 
   constructor(
     private productService: ProductsService,
+    private cartService: CartService
   ) { }
 
   ngOnInit(): void {
     this.productService.getProducts().subscribe(data => {
       this.Product = data;
+      this.Product.forEach((a: any) => {
+        Object.assign(a, { quantity: 1, total: a.productPrice });
+      })
     });
+  }
+
+  addtoCart(item: any) {
+    this.cartService.addToCart(item);
   }
 
 }
