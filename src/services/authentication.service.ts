@@ -17,13 +17,11 @@ export class AuthenticationService {
             username: username,
             password: password
         };
-        console.log(reqData);
         const resp = this.httpClient.post<LoginResponse>(environment.baseUrl + 'login',
             JSON.stringify(reqData), { headers: { "Content-Type": "application/json" }});
 
         resp.subscribe((data) => {
             this.user = data?.user;
-            // console.log(this.user);
         });
         return resp;
     }

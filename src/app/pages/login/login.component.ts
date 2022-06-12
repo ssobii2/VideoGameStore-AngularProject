@@ -29,14 +29,11 @@ export class LoginComponent implements OnInit {
     // Prevent page reloading.
     event.preventDefault();
     // Access username and password strings.
-    // const username = ((event.target as HTMLFormElement).username as HTMLInputElement).value;
-    // const password = ((event.target as HTMLFormElement).password as HTMLInputElement).value;
     const input1 = document.getElementById('exampleInputEmail1') as HTMLFormElement;
     const username = input1['value'];
     const input2 = document.getElementById('exampleInputPassword1') as HTMLInputElement;
     const password = input2['value'];
     //TODO: Front-end validation!
-    console.log(username, password);
     // Get login response.
     this.authService.login(username, password).subscribe(response => {
         if (response.validationError) {
