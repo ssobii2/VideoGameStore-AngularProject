@@ -1,18 +1,17 @@
-<app-navigation [userInput]="user"></app-navigation>
+<app-navigation></app-navigation>
 
-<form (submit)="onSubmit($event)" class="d-flex justify-centent-center align-items-center flex-column p-3 m-4">
+<form #loginForm="ngForm" (ngSubmit)="onLogin(loginForm)" class="d-flex justify-centent-center align-items-center flex-column p-3 m-4">
   <div class="m-4 text-danger w-50">
     <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+    <input required ngModel name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
   <div class="m-4 text-danger w-50">
     <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1">
+    <input required ngModel name="password" type="password" class="form-control" id="exampleInputPassword1">
   </div>
   <div class="d-flex flex-column justify-content-center align-items-center">
     <a href="/signup" class="m-2">Don't have an account? Click here to Sign up</a>
-    <button type="submit" class="btn btn-danger mb-4 ms-4">Submit</button>
+    <button [disabled]="!loginForm.valid" type="submit" class="btn btn-danger mb-4 ms-4">Submit</button>
   </div>
 </form>
 

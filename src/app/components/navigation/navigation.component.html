@@ -19,11 +19,14 @@
               <a class="nav-link text-white" href="/contact"><i class="fas fa-phone pe-2"></i>Contact</a>
             </li>
           </ul>
-          <a class="nav-link text-white" href="/login" *ngIf="!userInput">Login<i class="fas fa-sign-in-alt "></i></a>
+          <a *ngIf="!loggedIn()" class="nav-link text-white" href="/login">Login<i class="fas fa-sign-in-alt "></i></a>
 
-          <div id="profile" *ngIf="userInput" class="profile-container">
-            <a class="text-white text-decoration-none px-2" href="/profile">{{getDisplayName()}}</a>
-            <div [style.background-image]="'url(../../../assets/p-pic.jpg)'" class="profile-picture"></div>
+          <div *ngIf="loggedIn()" class="dropdown mr-5" dropdown>
+            <a href="#" class="dropdown-toggle nav-link text-white" dropdownToggle (click)="false">Welcome {{loggedInUser}}</a>
+            <div class="dropdown-menu" *dropdownMenu>
+              <a href="/profile" class="dropdown-item">My Profile</a>
+              <a (click)="onLogout()" href="#" class="dropdown-item">Logout</a>
+            </div>
           </div>
 
           <a class="custom-icon" href="/cart">
