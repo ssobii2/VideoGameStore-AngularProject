@@ -30,7 +30,6 @@ export class SignupComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.registrationForm.value);
     this.userSubmitted = true;
     if (this.registrationForm.valid) {
       this.authService.addUser(this.userData());

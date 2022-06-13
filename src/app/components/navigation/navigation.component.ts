@@ -1,5 +1,5 @@
 // @ts-nocheck
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AlertifyService } from 'src/services/alertify.service';
 import { CartService } from 'src/services/cart.service';
 
