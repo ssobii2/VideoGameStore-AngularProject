@@ -10,7 +10,7 @@ import { AuthenticationService } from 'src/services/authentication.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  
+
   constructor(
     private authService: AuthenticationService, private alertify: AlertifyService, private router: Router) { }
 
@@ -18,10 +18,11 @@ export class LoginComponent implements OnInit {
   }
 
   onLogin(loginForm: NgForm) {
-    console.log(loginForm.value);
     const token = this.authService.authUser(loginForm.value);
+    const email = this.authService.authUserEmail(loginForm.value);
     if (token) {
-      localStorage.setItem('token', token.userName)
+      localStorage.setItem('token', token.userName);
+      localStorage.setItem('email', email.email);
       this.alertify.success('Login successful!');
       this.router.navigate(['/']);
     } else {
