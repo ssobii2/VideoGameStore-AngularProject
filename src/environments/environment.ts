@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseUrl: 'http://localhost:4300/api/'
+  baseUrl: 'https://dry-reef-18710.herokuapp.com/api/'
 };
 
 /*
