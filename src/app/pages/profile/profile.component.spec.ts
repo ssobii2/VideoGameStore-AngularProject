@@ -22,4 +22,15 @@ describe('ProfileComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should create the profile component', () => {
+    const fixture = TestBed.createComponent(ProfileComponent);
+    const profile = fixture.componentInstance;
+    expect(profile).toBeTruthy();
+  });
+
+  it('should render the profile component', () => {
+    const compiled = fixture.nativeElement;
+    expect(compiled.querySelector('div')).toBeTruthy();
+  });
 });

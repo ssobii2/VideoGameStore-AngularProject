@@ -13,4 +13,16 @@ describe('AlertifyService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+
+  it('should be able to create an alert', () => {
+    service.success('success');
+  });
+
+  it('should be able to create an error', () => {
+    service.error('error');
+  });
+
+  it('should be able to create a warning', () => {
+    service.warning('warning');
+  });
 });

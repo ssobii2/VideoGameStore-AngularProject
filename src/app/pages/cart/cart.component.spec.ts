@@ -22,4 +22,15 @@ describe('CartComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should create the cart component', () => {
+    const fixture = TestBed.createComponent(CartComponent);
+    const cart = fixture.componentInstance;
+    expect(cart).toBeTruthy();
+  });
+
+  it('should render the cart table', () => {
+    const compiled = fixture.nativeElement;
+    expect(compiled.querySelector('div')).toBeTruthy();
+  });
 });

@@ -13,6 +13,26 @@ describe('NavigationComponent', () => {
     .compileComponents();
   });
 
+  it('should create the navigation component', () => {
+    const fixture = TestBed.createComponent(NavigationComponent);
+    const nav = fixture.componentInstance;
+    expect(nav).toBeTruthy();
+  });
+
+  it('should render the navigation component', () => {
+    const fixture = TestBed.createComponent(NavigationComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement;
+    expect(compiled.querySelector('nav')).toBeTruthy();
+  });
+
+  it('should display login when nobody is logged in', () => {
+    const fixture = TestBed.createComponent(NavigationComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement;
+    expect(compiled.querySelector('#login')).toBeTruthy();
+  });
+
   beforeEach(() => {
     fixture = TestBed.createComponent(NavigationComponent);
     component = fixture.componentInstance;

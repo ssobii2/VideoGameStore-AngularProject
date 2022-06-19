@@ -22,4 +22,15 @@ describe('CarousalComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should create the carousal component', () => {
+    const fixture = TestBed.createComponent(CarousalComponent);
+    const carousal = fixture.componentInstance;
+    expect(carousal).toBeTruthy();
+  });
+
+  it('should render the carousal component', () => {
+    const compiled = fixture.nativeElement;
+    expect(compiled.querySelector('ngb-carousel')).toBeTruthy();
+  });
 });

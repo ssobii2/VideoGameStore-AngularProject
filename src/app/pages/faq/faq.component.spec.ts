@@ -22,4 +22,15 @@ describe('FaqComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should create the faq component', () => {
+    const fixture = TestBed.createComponent(FaqComponent);
+    const faq = fixture.componentInstance;
+    expect(faq).toBeTruthy();
+  });
+
+  it('should render the faq component', () => {
+    const compiled = fixture.nativeElement;
+    expect(compiled.querySelector('ngb-accordion')).toBeTruthy();
+  });
 });

@@ -22,4 +22,15 @@ describe('CheckoutComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should render the checkout component', () => {
+    const compiled = fixture.nativeElement;
+    expect(compiled.querySelector('h1').textContent).toContain('Thank You.');
+  });
+
+  it('should create the checkout component', () => {
+    const fixture = TestBed.createComponent(CheckoutComponent);
+    const checkout = fixture.componentInstance;
+    expect(checkout).toBeTruthy();
+  });
 });
