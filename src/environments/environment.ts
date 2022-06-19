@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseUrl: 'https://videogamestore-backend.onrender.com/api/'
+  baseUrl: 'https://dry-reef-18710.herokuapp.com/api/'
 };
 
 /*
