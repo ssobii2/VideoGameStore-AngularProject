@@ -1,3 +1,6 @@
+# Public Link
+https://videogamestore-c4466.web.app/
+
 # Documentation
 Go to the wiki tab for the documentation of the project.
 
