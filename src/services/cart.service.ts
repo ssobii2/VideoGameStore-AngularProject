@@ -17,18 +17,18 @@ export class CartService {
     }
   }
 
-  // Get cart data
+  // get cart data from local storage
   getProductData() {
     return JSON.parse(localStorage.getItem('cartData'));
   }
 
-  // Set cart data
+  // save cart data in local storage
   setProduct(product: any) {
     localStorage.setItem('cartData', JSON.stringify(product));
     this.productList.next(this.getProductData());
   }
 
-  // Add products to cart
+  // add products to cart
   addToCart(product: any) {
     const ls = this.getProductData();
 
@@ -53,7 +53,7 @@ export class CartService {
     this.getTotalAmount();
   }
 
-  // Calculate total amount
+  // calculate total amount of products
   getTotalAmount() {
     let grandTotal = 0;
     const ls = this.getProductData();
@@ -62,7 +62,6 @@ export class CartService {
         grandTotal += item.productPrice;
       })
     }
-    console.log(grandTotal);
     return grandTotal;
   }
 }

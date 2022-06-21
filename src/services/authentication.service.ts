@@ -7,6 +7,7 @@ export class AuthenticationService {
 
     constructor() {}
 
+    // getting the user input data from local storage and matching it with the local storage data
     authUser(user: User) {
       let UserArray = [];
       if (localStorage.getItem('Users')) {
@@ -15,6 +16,7 @@ export class AuthenticationService {
       return UserArray.find(p => p.email === user.email && p.password === user.password);
     }
 
+    // getting the user input email from local storage and matching it with the local storage emails
     authUserEmail(user: User) {
       let UserArray = [];
       if (localStorage.getItem('Users')) {
@@ -23,6 +25,7 @@ export class AuthenticationService {
       return UserArray.find(p => p.email === user.email);
     }
 
+    // registration of the new user in local storage
     addUser(user) {
       let users = [];
       if (localStorage.getItem('Users')) {

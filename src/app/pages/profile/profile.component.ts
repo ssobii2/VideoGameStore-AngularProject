@@ -15,6 +15,7 @@ export class ProfileComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // displays the correct logged in user profile details
   loggedIn() {
     this.loggedInUser = localStorage.getItem('token');
     this.emailOfUser = localStorage.getItem('email');

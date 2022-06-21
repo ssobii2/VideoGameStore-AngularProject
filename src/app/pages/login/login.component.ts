@@ -17,9 +17,10 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // saves user and email in local storage with alert message
   onLogin(loginForm: NgForm) {
-    const token = this.authService.authUser(loginForm.value);
-    const email = this.authService.authUserEmail(loginForm.value);
+    const token = this.authService.authUser(loginForm.value);   // calling authUser function from service
+    const email = this.authService.authUserEmail(loginForm.value);  // calling authUserEmail function from service
     if (token) {
       localStorage.setItem('token', token.userName);
       localStorage.setItem('email', email.email);

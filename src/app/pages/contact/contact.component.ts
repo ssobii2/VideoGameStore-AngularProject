@@ -19,6 +19,7 @@ export class ContactComponent implements OnInit {
     this.createRegistrationForm();
   }
 
+  // validation of the registration form is done here
   createRegistrationForm() {
     this.registrationForm = this.fb.group({
       email: [null, [Validators.required, Validators.email]],
@@ -27,6 +28,7 @@ export class ContactComponent implements OnInit {
     });
   }
 
+  // displays a message when user presses submit button
   onSubmit() {
     this.userSubmitted = true;
     if (this.registrationForm.valid) {
@@ -38,6 +40,7 @@ export class ContactComponent implements OnInit {
   }
 }
 
+// getting the value of email, username and password respectively from input fields
 get email() {
   return this.registrationForm.get('email') as FormControl;
 }

@@ -15,17 +15,20 @@ export class CartComponent implements OnInit {
   constructor(private cartService: CartService) { }
 
   ngOnInit(): void {
+    // displaying the products in the cart and getting total amount of them
     this.cartService.productList.subscribe(data => {
       this.products = data;
       this.allProducts = this.cartService.getTotalAmount();
     })
   }
 
+  // removes product from cart one by one
   removeProduct(item: any) {
     this.products.splice(item, 1);
     this.cartService.setProduct(this.products);
   }
 
+  // removes all products from the cart
   removeAllProducts() {
     this.products = [];
     this.cartService.setProduct(this.products);

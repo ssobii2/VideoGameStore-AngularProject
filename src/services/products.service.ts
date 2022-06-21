@@ -11,6 +11,7 @@ export class ProductsService {
 
   constructor(private httpClient: HttpClient) { }
 
+  // getting the products from the backend hosted link
   getProducts(): Observable<PRODUCT[]> {
     return this.httpClient.get<PRODUCT[]>(environment.baseUrl + 'products')
   }

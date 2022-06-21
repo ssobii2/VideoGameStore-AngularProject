@@ -18,6 +18,7 @@ export class ProductsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    // displays the products on the games page
     this.productService.getProducts().subscribe(data => {
       this.Product = data;
       this.Product.forEach((a: any) => {
@@ -26,6 +27,7 @@ export class ProductsComponent implements OnInit {
     });
   }
 
+  // adds item to cart when user presses buy button
   addtoCart(item: any) {
     this.cartService.addToCart(item);
   }
